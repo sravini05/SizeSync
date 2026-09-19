@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.thread");
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .tick {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      theme("colors.ink") 0px,
+      theme("colors.ink") 1px,
+      transparent 1px,
+      transparent 12px
+    );
+  }
+}

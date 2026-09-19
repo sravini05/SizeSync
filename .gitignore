@@ -1,0 +1,72 @@
+# =========================
+# SizeSync - Git Ignore
+# =========================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# ---------- Environment / Secrets ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Backend generated data ----------
+backend/storage/uploads/*
+!backend/storage/uploads/.gitkeep
+
+backend/storage/meshes/*
+!backend/storage/meshes/.gitkeep
+
+# ---------- Database ----------
+backend/sizesync.db
+*.db
+*.sqlite
+*.sqlite3
+
+# ---------- ML / AI model files ----------
+# Keep ML models and generated model data out of GitHub
+models/
+backend/models/
+backend/storage/work/
+
+*.npz
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.tflite
+*.pkl
+
+# ---------- Node / Frontend ----------
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+build/
+
+# ---------- IDE ----------
+.vscode/
+.idea/
+
+# ---------- Testing / Cache ----------
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# ---------- Logs ----------
+*.log
+
+# ---------- Temporary / Generated ----------
+uploads/
+outputs/
+*.tmp
+*.temp
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
